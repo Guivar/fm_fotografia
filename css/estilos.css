@@ -1,0 +1,622 @@
+/*Fuentes importadas Google-fonts*/ 
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Nanum+Gothic:wght@400;800&family=Quicksand:wght@400;700&display=swap');
+/* Reset e inicio de estilos */
+*{margin: 0; padding: 0;}
+*{box-sizing:border-box;}
+
+/*Estilos generales para todos los HTML*/
+body { /* Estilo de fuente para todo*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*ESTILOS GENERALES EN EL ENCABEZADO*/
+header{
+    background: black;
+    width: 100%;
+    height: 7em;
+}
+
+nav{ /*Justificaciones en el contenedor de encabezado*/
+    width: 100%;
+    padding-top: 4px;
+    text-align: center;
+}
+
+main{/* Estilos al contenedor de galeria*/
+    background: #242424;
+}
+
+h1 { /* Estilo de fuente para el encabezado FOTOGRAFIA*/
+    font-size: 1.2em;
+    color: white;
+    font-family: Audiowide;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+h2 { /* Estilos de fuente para cada subtitulo*/
+    font-size: 1em;
+    text-transform: uppercase;
+    word-spacing: 10px;
+    margin-bottom: 25px;
+}
+.subAbout{
+    padding-top: 0.7em;
+    padding-left: 3%;
+    height: 1em;
+    color:#fff;
+    width: 100%;
+
+}
+
+.logo-navegacion{ /*Estilos al logo FM*/
+    width: auto;
+    height: 40px;
+}
+
+/*ESTILOS GENERALES EN EL ENCABEZADO DE NAVEGACION*/
+nav label { /*Estilos al contenedor de la imagen del menu mobile*/
+    display: none;
+}
+/* Estilos al menu de navegacion Mobile*/
+#btn-menu{ /*Ocultar el check-box*/
+    display: none;
+}
+/* Estilos a los enlaces de navegacion de las demas Views*/
+.navegacion {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 2.5em;
+}
+
+.navegacion li { /*Estilos a cada enlace de lanavegacion lista*/
+    list-style: none;
+    padding: 4px 10px;
+    height: 25px;
+    border-radius: 3px;
+}
+.navegacion li:hover {
+    background: whitesmoke;
+    transition: 0.8s;
+}
+
+.enlaceNavegacion { /*Estilos a cada enlace de lanavegacion*/
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: LIGHTGREY;
+    letter-spacing: 2px;
+    
+}
+.enlaceNavegacion:hover {
+    color: black;
+}
+
+/*ESTILOS GENERALES EN EL PIE DE PAGINA*/
+footer { /*Justificaciones al contenedor*/
+    background: #1e1e1e;
+    padding: 4px 0px;
+    text-align: center;
+}
+
+footer h4 { /*Estilos al texto del pie de pagina*/
+    color: #fff;
+    font-size: 0.6em;
+    word-spacing: 7px;
+    padding: 1em 0px 1em;
+}
+
+/*Estilos a los enlaces y botones RRSS*/
+.botones-rrss { /*Estilos al contenedor de RRSS*/
+    border: solid 2px color #ffffff;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    
+}
+
+.botones-rrss a { /*Estilos a los botones de RRSS*/
+    display: inline-flex;
+    color: #ffffff;
+    height: 28px;
+    width: 28px;
+    background: black;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+   
+    border: solid 2px #fff;
+    border-radius: 50%;
+    font-size: 1.2em;
+    margin: 0 5px;
+    transition: transform 0.4s;
+}
+
+.botones-rrss .facebook:hover { /*Estilos animados al boton Face*/
+    transform: scale(1.3);
+    background-color: #3c70a4;
+}
+
+.botones-rrss .whatsapp:hover { /*Estilos animados al boton WPP*/
+    transform: scale(1.3);
+    background-color: #00bb2d;
+}
+
+.botones-rrss .instagram:hover { /*Estilos animados al boton Instagram*/
+    transform: scale(1.3);
+    background-color: #E1306C;
+}
+
+/****************--------------- ESTILOS GENERALES PARA EL INDEX-------------------------------************/
+/*Estilos provisorios*/
+.cuerpoIndex {
+    width: 100%;
+    height: 148.5rem;
+    display: grid;
+    justify-items: stretch;
+    align-items: center;
+
+    /* GRID AREA INDEX*/
+    /*Layout Index*/
+    grid-template-areas: 
+    "encabezado"
+    "contenidoindex"
+    "pie"
+    ;
+    grid-template-rows: 7em auto 3%; /* jUSTIFICACIONES DE TAMANO FILAS 1,2,3*/
+}
+
+/*Estilos provisorios*/
+/*Identificacion areas Index*/
+.cabezaIndex {
+    grid-area: encabezado;
+}
+
+.contenedorGeneralIndex {
+    grid-area: contenidoindex;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.pieIndex {
+
+    grid-area: pie;
+}
+
+/*.contenedorGeneralIndex {/*Propiedades y justificaiones al contenido*/
+.contenedorFotos{
+    border: solid 1px #fff;
+}
+
+/* Estilos al contenedor de cada titulo de las columnas de fotos)*/
+.tituloScroll {
+    height: 2.5em;
+    background-color: #242424;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding-top: 0.8em;
+    margin-bottom: 2px;
+}
+
+.columnafotos { /*Estilos a la columna de fotos*/
+    display: flex;
+    flex-direction: column;
+    justify-content: last baseline;
+
+}
+
+.imagenIndex{ /****Justificaciones de tamano a cada imagen del INDEX*/
+    width: 20rem;
+    height: auto;
+}
+
+/*...........................          ESTILOS A LA SECCION PORTAFOLIO            ...........................*/
+/* Estilos al contenido de las sessiones de portfolio*/
+
+.seccion-portfolio h3, p {
+    background: whitesmoke;
+    margin-left: 40px;
+}
+
+
+
+/* Estilos de la galeria*/
+.galeria{ /* Justificacion de los elementos*/
+    width: 95%;
+    margin: auto;
+    list-style: none;
+    padding: 10px;
+    box-sizing: border-box;
+    
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.galeria li { /* margenes a los elementos li */
+    margin: 3px;
+}
+
+.galeria img { /*--Propiedades a las imagenes de la galeria--*/
+    width: 11em;
+    height: auto;
+    border: solid 1px #999;
+    border-radius: 5px;
+}
+/*** Modal para vista ***/
+/* Estilos al modal*/
+.modal{
+    display: none;
+}
+
+.modal:target { /*Fondo contenedor de la vista modal*/
+    display: block;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.foto{ /*Propiedades del contenedor de la imagen en modo vista modal*/
+    width: 100%;
+    height: 70%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto a{ /* Estilos a los signos < X > */
+    color: #fff;
+    font-size: 50px;
+    text-decoration: none;
+    margin: 0px 10px;
+}
+
+.foto a:nth-child(2){ /* Justificacion de los signos < X >*/
+    margin-top: 40px;
+    height: 100%;
+    flex-shrink: 2;
+}
+
+.foto img { /* Propiedades a la imagen en modo modal */
+    width: 350px;
+    height: auto;
+    max-width: 100%;
+    border: solid 7px #e9e9e9;
+    box-sizing: border-box;
+}
+
+.cerrar{ /* Propiedades al boton de cerrar en vista modal*/
+    display: block;
+    background: #fff;
+    width: 25px;
+    height: 25px;
+    margin: 90px auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    padding: 5px;
+    border-radius: 50%;
+    line-height: 15px;
+}
+/*...........................          ESTILOS A LA SECCION SOBRE MI            ...........................*/
+.contenido-sobremi{ /*Justifiaciones de contenido*/
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.seccion-about{ /*Tamano del cuerpo de contenido*/
+    height: 500px;
+}
+
+.contParrafoAbout {
+    width: 80%;
+}
+
+.contParrafoAbout p {
+    line-height: 15px;
+}
+/*...........................          ESTILOS A LA SECCION OPINIONES            ...........................*/
+
+/* Estilos al contenedor hijo en Opiniones (OP1, OP2, etc)*/
+
+.cuerpo-opiniones{
+    height: 900px;
+}
+
+
+legend{
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 16px;
+}
+
+/* Estilos al formulario de Opiniones*/
+.inOp{
+    padding: 1em;
+    height: 24em;
+    width: 50em;
+    margin: 0.8em auto;
+    text-align: left;
+    line-height: 20px;
+    background: #999;
+    color: #545454;
+    font-size: 0.9em;
+    font-weight: bolder;
+    border-radius: 7px;
+}
+
+.descripcion1{
+    width: 100%;
+    height: 4em;
+}
+/*
+.boxOpn {
+    width: 50em;
+    height: 10em;
+    padding: 40px 20px;
+
+}*/
+
+legend{ /*Estilos al legend del formulario de opiniones*/
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 16px;
+}
+
+/* Estilos al formulario de Opiniones*/
+.inOp{
+    padding: 1em;
+    height: 24em;
+    width: 50em;
+    margin: 0.8em auto;
+    text-align: left;
+    line-height: 10px;
+    background: #999;
+    color: #545454;
+    font-size: 0.9em;
+    font-weight: bolder;
+    border-radius: 7px;
+}
+
+.descripcion1{ /*Descripcion al formulario de opiniones*/
+    width: 100%;
+    height: 4em;
+}
+
+/****************              +++++ESTILOS A LA SECCION CONTACTO+++++++++             *******************/
+
+/* Estilos al contenedor hijo en contacto (Parrafo, mapa)*/
+.cuerpo-contacto{
+    height: 800px;
+    color: white;
+}
+
+.cont-contacto2 p {
+    line-height: 15px;
+    padding: 10px 20px;
+}
+/* Estilos a inputs Form */
+.inform{
+    width: 100%;
+    height: 2.2em;
+    padding-left: 5px;
+    margin-bottom: 10px;
+
+}
+
+/* Estilos al boton enviar Form */
+.bottons{
+    width: 100%;
+    height: 3em;
+    color: #fff;
+    background: #242424;
+    cursor: pointer;
+
+}
+
+/* Estilos al Form de contacto */
+.formcontacto{
+    margin: 1em auto;
+    border-radius: 5px;
+    padding: 20px;
+    width: 25%;
+    height: 24em;
+    text-align: left;
+    line-height: 20px;
+    background: #999;
+    color: #545454;
+    font-weight: bolder;
+}
+
+.descripcion2{ /*Descripcion del formulario de contacto*/
+    width: 100%;
+    height: 50px;
+}
+
+
+
+/******------------(MOBILE RESPONSIVE)---------*******/
+@media (max-width:480px) {
+    header{ /*Estilos generales al contenedor encabezado*/
+        height: 4em;
+    }
+    
+    nav{ /***Disposicion de elementos en el encabezado***/
+        display: flex;
+        justify-content: space-around;
+        padding-top: 10px;
+    }
+    nav a { /** Justificaciones de alineado al logo FM**/
+        width: 11em;
+    }
+    .logo-navegacion{ /*Estilos al logo FM en Mobile*/
+        width: auto;
+        height: 45px;
+        padding-top: 2px;
+    }
+    h1 { /*Disposicion del titulo encabezado FOTOGRAFIA*/
+        display: none;
+    }
+    /* Estilos a los enlaces de navegacion de las demas Views*/
+    .navegacion {
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-evenly;
+        background-color: rgba(1, 1, 1,0.9);
+        height: 200px;
+        width: 100%;
+        position: fixed;
+        top: 4em;
+        left: -100%;
+        transition: 1s ease-in-out;
+    }
+    /* Estilos al menu de navegacion Mobile*/
+    .nav-input:checked + .navegacion { /*Busqueda y mostrar menu navegacion*/
+        left: 0;
+    }
+    .navegacion li{ /** Estilos a los elementos Li de Navegacion**/
+        height: 40px;
+        width: 100%;
+        line-height: 25px;
+    }
+    .navegacion li:hover { /***Estilos al seleccionar elemento del menu Mobile de navegacion***/
+        background: whitesmoke;
+        transition: 0.8s;
+    }
+
+    .enlaceNavegacion { /*Estilos a cada enlace de lanavegacion*/
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.6rem;
+        cursor: pointer;
+        font-weight: bold;
+        color: LIGHTGREY;
+        letter-spacing: 2px;
+    }
+    .enlaceNavegacion:hover { /*Transicion al momento de tocar el enlace*/
+        color: black;
+    }
+    
+    
+    nav label { /*Estilos al contenedor de la imagen del menu mobile*/
+        display: block;
+        margin-left: 1em;
+        width: 45px;
+        height: 45px;
+        padding: calc((45px - 30px)/2);
+        background: #fff;
+        border-radius: 5px;
+    }
+    nav label:hover {  /**Estilos al boton de navegacion del menu mobile**/
+        cursor: pointer;
+        background: rgba(224, 224, 224, 1.8);
+
+    }
+    nav label img{ /* Estilos a la imagen del menu mobile dimensiones*/
+        width: 30px;
+        height: 30px;
+    }
+    /********* GRID AREA MOBILE*******/
+    /*Estilos provisorios*/
+    .cuerpoIndex {
+        width: 100%;
+        height: 148.5rem;
+        display: grid;
+
+        /* GRID AREA INDEX MOBILE*/
+        /*Layout Index*/
+        grid-template-areas: 
+        "encabezado"
+        "contenidoindex"
+        "pie"
+        ;
+        grid-template-rows: 4em auto 3%; /* jUSTIFICACIONES DE TAMANO FILAS 1,2,3*/
+    }
+
+    /*Estilos provisorios*/
+    /*Identificacion areas Index*/
+    .cabezaIndex {
+        border: solid 1px black;
+        grid-area: encabezado;
+    }
+
+    .contenedorGeneralIndex {
+        border: solid 1px black;
+        grid-area: contenidoindex;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+
+    .pieIndex {
+        border: solid 1px black;
+        grid-area: pie;
+    }
+
+    .imagenIndex{ /****Justificaciones de tamano a cada imagen del INDEX*/
+        width: 100%;
+        max-width: 480px;
+        height: auto;
+    }
+
+    /**----------Estilos al Portafolio--------------**/
+
+
+    
+
+}
+
+/******MOBILE-TABLET RESPONSIVE*******/
+@media (min-width:481px) and (max-width:1023px) {
+
+    h1 { /*Disposicion del titulo encabezado FOTOGRAFIA*/
+        display: none;
+    }
+
+    header{ /*Estilos generales al contenedor encabezado*/
+        height: 4em;
+        width: 100%;
+        background: black;
+    }
+
+    nav{ /***Disposicion de elementos en el encabezado***/
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        padding-left: 50px;
+    }
+    nav a { /** Justificaciones de alineado al logo FM**/
+        
+        left: 10px;
+
+    }
+    .logo-navegacion{ /*Estilos al logo FM en Mobile*/
+        width: auto;
+        height: 45px;
+        padding-top: 2px;
+        left: 0;
+    }
+}
