@@ -4,58 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opiniones</title>
+    <title>Opiniones | FM Fotografia</title>
     <link rel="shortcut icon" href="../media/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="menu-navegacion">
             <!--Logo y Marca -->
-            <a href="../index.html"> <img class="logo-navegacion" src="../media/logo2.png"></a>
-            <h1>fotografia</h1>
-
-            <!--Navegacion tipo Mobile-->
-            <label for="btn-menu" class="nav-label"><img src="../media/menu.png" alt=""></label>
-            <input type="checkbox" id="btn-menu" class="nav-input">
+            <div class="logo-marca">
+                <a href="../index.html"> <img img class="logo-navegacion" src="../media/logo2.png"></a>
+                <h1>fotografia</h1>
+            </div>
 
             <!--Navegacion-->
-            <ul class="navegacion">
-                <li><a class="enlaceNavegacion" href="./about.html">Sobre Mi</a></li>
-                <li><a class="enlaceNavegacion" href="./portfolio.html">Portfolio</a></li>
-                <li><a class="enlaceNavegacion" href="opiniones.html">Opiniones</a></li>
-                <li><a class="enlaceNavegacion" href="./contacto.html">Contacto</a></li>
-            </ul>
+            <div class="menu">
+                <!--Navegacion tipo Mobile-->
+                <label for="btn-menu" class="nav-label"><i class="fas fa-bars"></i></label>
+                <input type="checkbox" id="btn-menu" class="nav-input">
+
+                <!--Barra de navegacion-->
+                <ul class="navegacion">
+                    <li><a class="enlaceNavegacion" href="./about.html">Sobre Mi</a></li>
+                    <li><a class="enlaceNavegacion" href="./portfolio.html">Portafolio</a></li>
+                    <li><a class="enlaceNavegacion" href="opiniones.html">Opiniones</a></li>
+                    <li><a class="enlaceNavegacion" href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <main class="cuerpo-opiniones">
-        <section class="Op1">
+        <section class="seccion-opiniones">
             <h2 class="subAbout">Opiniones</h2>
-            <div class="boxOpn">
-                <h3 class="nombreUsuario">Name cliente 1</h3>
-                <!--Valoracion 1-->
-                <p>Cras imperdiet arcu ullamcorper augue aliquam gravida. Nulla aliquet dolor sit amet volutpat scelerisque. Nulla maximus ornare dui non commodo.</p>
-                <hr/>
+            <div class="caja-opiniones">
+                <div class="box-opinion">
+                    <h3 class="nombreUsuario">Name cliente 1</h3>
+                    <!--Valoracion 1-->
+                    <p>Cras imperdiet arcu ullamcorper augue aliquam gravida. Nulla aliquet dolor sit amet volutpat scelerisque. Nulla maximus ornare dui non commodo.</p>
+                
+                </div>
+                <div class="box-opinion">
+                    <h3 class="nombreUsuario">Name cliente 2</h3>
+                    <!--Valoracion 2-->
+                    <p>Cras imperdiet arcu ullamcorper augue aliquam gravida. Nulla aliquet dolor sit amet volutpat scelerisque. Nulla maximus ornare dui non commodo.</p>
+                    
+                </div>   
+                <div class="box-opinion">
+                    <h3 class="nombreUsuario">Name cliente 3</h3>
+                    <!--Valoracion 2-->
+                    <p>Cras imperdiet arcu ullamcorper augue aliquam gravida. Nulla aliquet dolor sit amet volutpat scelerisque. Nulla maximus ornare dui non commodo.</p>
+                    
+                </div> 
             </div>
-            <div class="boxOpn">
-                <h3 class="nombreUsuario">Name cliente 2</h3>
-                <!--Valoracion 2-->
-                <p>Cras imperdiet arcu ullamcorper augue aliquam gravida. Nulla aliquet dolor sit amet volutpat scelerisque. Nulla maximus ornare dui non commodo.</p>
-                <hr/>
-            </div>   
-            <div class="boxOpn">
-                <h3 class="nombreUsuario">Name cliente 3</h3>
-                <!--Valoracion 2-->
-                <p>Cras imperdiet arcu ullamcorper augue aliquam gravida. Nulla aliquet dolor sit amet volutpat scelerisque. Nulla maximus ornare dui non commodo.</p>
-                <hr/>
-            </div> 
         </section>
 
         <!--Formulario para agregar una nueva opinion--> 
-        <form class="Op1">
-            <fieldset class="inOp">
+        <form class="formulario-opiniones">
+            <fieldset class="contenedor-formulario">
                 <legend>Agrega tu opinión</legend>
 
                 <div>
@@ -63,10 +70,6 @@
                     <input class="inform" type="text" name="nombre"/>
                 </div>
 
-                <div>
-                    <label for="apellidos">Apellido</label>
-                    <input class="inform" type="text" name="apellidos"/>
-                </div>
                 <label for="opinion">Opinion</label> 
                 <textarea class="descripcion1" name="opinion" cols="10" rows="2"></textarea>
                 <input class="bottons" type="submit" value="Enviar">
@@ -78,8 +81,6 @@
                 
             </fieldset>
         </form>
-
-        <div class="clearfix"></div>
 
     </main>
 

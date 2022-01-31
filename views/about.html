@@ -4,29 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mi</title>
+    <title>Sobre Mi | FM Fotografia</title>
     <link rel="shortcut icon" href="../media/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="menu-navegacion">
             <!--Logo y Marca -->
-            <a href="../index.html"> <img class="logo-navegacion" src="../media/logo2.png"></a>
-            <h1>fotografia</h1>
-
-            <!--Navegacion tipo Mobile-->
-            <label for="btn-menu" class="nav-label"><img src="../media/menu.png" alt=""></label>
-            <input type="checkbox" id="btn-menu" class="nav-input">
+            <div class="logo-marca">
+                <a href="../index.html"> <img img class="logo-navegacion" src="../media/logo2.png"></a>
+                <h1>fotografia</h1>
+            </div>
 
             <!--Navegacion-->
-            <ul class="navegacion">
-                <li><a class="enlaceNavegacion" href="about.html">Sobre Mi</a></li>
-                <li><a class="enlaceNavegacion" href="./portfolio.html">Portfolio</a></li>
-                <li><a class="enlaceNavegacion" href="./opiniones.html">Opiniones</a></li>
-                <li><a class="enlaceNavegacion" href="./contacto.html">Contacto</a></li>
-            </ul>
+            <div class="menu">
+                <!--Navegacion tipo Mobile-->
+                <label for="btn-menu" class="nav-label"><i class="fas fa-bars"></i></label>
+                <input type="checkbox" id="btn-menu" class="nav-input">
+
+                <!--Barra de navegacion-->
+                <ul class="navegacion">
+                    <li><a class="enlaceNavegacion" href="about.html">Sobre Mi</a></li>
+                    <li><a class="enlaceNavegacion" href="./portfolio.html">Portafolio</a></li>
+                    <li><a class="enlaceNavegacion" href="./opiniones.html">Opiniones</a></li>
+                    <li><a class="enlaceNavegacion" href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -34,13 +39,8 @@
         <section class="seccion-about">
             <h2 class="subAbout">Sobre Mi</h2>
             <div class="contenido-sobremi">
-                <div class="contImagenAbout"> <!--Imagen del fotografo-->
-                    <img src="../media/autoretrato-4.jpg" style="width: 230px; height: auto;">
-                </div>
-
+                
                 <div class="contParrafoAbout">   <!--Descripción del perfil-->
-                    <p class="parrafoAbout">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at mi finibus, dictum mi ac, varius eros. Praesent non purus volutpat, porttitor nulla ut, viverra justo. Aliquam a laoreet diam. Fusce non dignissim erat, ut pulvinar odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur euismod ac velit at commodo. Proin dignissim at mauris eget tristique. Vivamus quam purus, condimentum vitae bibendum non, sodales et mi.</p>
-                    
                     <p class="parrafoAbout">Donec sagittis felis a luctus interdum. Integer vel sem non ipsum finibus facilisis. Pellentesque ac leo eget risus lacinia semper vitae nec lacus.</p>
                     
                     <p class="parrafoAbout">Maecenas quis mauris sed diam scelerisque fringilla sit amet vel odio. Mauris ultricies tortor arcu, vel imperdiet nibh sagittis a. Fusce et dapibus lectus. Quisque lacinia aliquet tortor, eget ullamcorper tortor blandit eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
